@@ -1,0 +1,512 @@
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.head {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    margin-top: 0;
+    top: 0;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    margin-right: 120px;
+    width: 750px;
+    justify-content: space-between;
+}
+.nav p {
+    font-family: Metropolis, sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+    align-items: center;
+}
+#icn {
+    width: 10px;
+}
+.det {
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    padding: 0 10px;
+}
+.content {
+    color: #666666;
+    background-color: white;
+    width: 200px;
+    display: none;
+    margin-top: 5px;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(107, 107, 107, 0.2);
+    /* margin-top: 20px; */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.content a p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+.content a {
+    text-decoration: none;
+}
+.content a p:hover {
+    color: #6db33f;
+}
+.det:hover .content {
+    display: block;
+    position: absolute;
+}
+.nav img {
+    width: 30px;
+}
+.logo {
+    width: 220px;
+    margin-left: 100px;
+}
+.banner {
+    width: 100%;
+    background-image: url(./banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+.banner h1 {
+    font-family: Metropolis, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 80px;
+}
+.banner button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    cursor: zoom-in;
+    transition: background-color 0.3s ease;
+}
+.banner button::before {
+    content: "";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    transition: left 0.3s ease; 
+}
+.banner button .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+        display: none; 
+}
+.banner button:hover .text {
+    display: block;
+}
+.banner button:hover::before {
+    left: 0; 
+}
+#news {
+    display: flex;
+    width: 320px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: auto;
+}
+.news {
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid whitesmoke;
+    align-items: center;
+    display: flex;
+}
+#news p {
+    background-color: #0066cc;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+    width: 60px;
+    font-size: 12PX;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+#news a {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+}
+#news a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #086dc3; 
+    transition: width 0.3s ease; 
+}
+#news a:hover::before {
+    width: 100%;
+}
+.do {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 3px solid whitesmoke;
+    margin-top: 40px;
+    text-align: center;
+    color: black;
+}
+
+.box:hover {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    margin-top: 32px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 0 10px rgba(52, 53, 53, 0.2);
+    transition: all .2s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    
+}
+.do a {
+    text-decoration: none;
+}
+.box img {
+    width: 120px;
+    margin: auto;
+    margin-top: 20px;
+}
+.box h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.box p {
+    margin: auto;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 27px;
+}
+.main h1 {
+    font-family: Metropolis, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 70px 0 10px 160px;
+}
+.code {
+    background-color: #191e1e;
+    width: 550px;
+    height: 250px;
+    margin-top: 100px;
+    padding-top: 70px;
+    padding-left: 70px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(108,135,135,.2);
+    margin-left: 250px;
+}
+#blue {
+    color: #85D9EB;
+}
+#green {
+    color: #56E27A;
+}
+#yellow {
+    color: #D4F088;
+}
+code {
+    color: white;
+    line-height: 20px;
+}
+.write {
+    width: 450px;
+    margin-top: 120px;
+    margin-left: 70px;
+}
+.write h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.write p {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+.write a {
+    text-decoration: none;
+    color: #086dc3;
+    position: relative;
+}
+.write a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #086dc3; 
+    transition: width 0.3s ease; 
+}
+.write a:hover::before {
+    width: 100%;
+}
+.main2 {
+    display: flex;
+}
+.quote {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.quote img {
+    width: 70px;
+    margin: 30px 0;
+}
+.quote h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    color: #589133;
+}
+.bakker {
+    width: 480px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: auto;
+    justify-content: space-around;
+}
+.bakker h3 {
+    font-size: 16PX;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+.bakker img {
+    border-radius: 50px;
+    width: 70px;
+}
+.bakker a {
+    text-decoration: none;
+    color: #086dc3;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+}
+.bakker a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #086dc3; 
+    transition: width 0.3s ease; 
+}
+.bakker a:hover::before {
+    width: 100%;
+}
+.footb {
+    width: 100%;
+    height: 340px;
+    background-image: url(./footbanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gen {
+    margin-left: 50px;
+    display: flex;
+    margin-top: 100px;
+}
+.con {
+    width: 360px;
+    margin-left: 70px;
+    margin-top: 120px;
+}
+.con a {
+    text-decoration: none;
+    color: #086dc3;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+}
+.con a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #086dc3; 
+    transition: width 0.3s ease; 
+}
+.con a:hover::before {
+    width: 100%;
+}
+.con h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+}
+.con p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+.w {
+    width: 200px;
+}
+.ft {
+    display: flex;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.w a {
+    text-decoration: none;
+}
+.w a h2:hover {
+    text-decoration: none;
+    color: #6db33f;
+}
+.w a p:hover {
+    text-decoration: none;
+    color: #6db33f;
+}
+.w a h2 {
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+}
+.w a p {
+    color: #4d4c4c;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+.nl h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 150px;
+}
+.last {
+    width: 72%;
+    padding-left: 120px;
+    padding-bottom: 100px;
+}
+.last img {
+    width: 220px;
+}
+.last p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: black;
+}
+.last p a {
+    text-decoration: none;
+    color: black;
+}
+.last #p {
+    color: #B5B5B5;
+}
+.ic img {
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#ic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: black;
+    position: relative;
+}
+#ic:hover {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #589133;
+    position: relative;
+}
+.ic {
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+.down {
+    display: flex;
+}
